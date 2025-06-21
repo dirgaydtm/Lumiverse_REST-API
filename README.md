@@ -1,6 +1,9 @@
 # Lumiverse REST API
 
-**Lumiverse REST API** adalah backend sederhana berbasis Node.js + Express yang memungkinkan kamu mengelola rencana nonton film bersama teman! API ini terhubung ke database MySQL dan menyediakan endpoint CRUD yang mudah diintegrasikan ke aplikasi front-end favoritmu.
+**Lumiverse REST API** adalah backend sederhana berbasis Node.js + Express yang memungkinkan kamu mengelola rencana nonton film bersama teman! API ini terhubung ke database MySQL dan menyediakan endpoint CRUD yang mudah diintegrasikan.
+
+![Desktop_Version](https://private-user-images.githubusercontent.com/50694844/457590976-635b6804-17f6-4d57-b6c9-bb25864e98c7.png)
+![Mobile_Version](https://private-user-images.githubusercontent.com/50694844/457591002-1f312b7b-fe6d-4423-b62e-13ffd4ea8b91.png)
 
 ---
 
