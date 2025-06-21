@@ -23,6 +23,7 @@
 - **Express.js**  
 - **MySQL (mysql2/promise)**  
 - **CORS**
+- **Tailwind**
 
 ---
 
