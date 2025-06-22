@@ -1,11 +1,13 @@
 const express = require("express");
 const mysql = require("mysql2/promise");
 const cors = require("cors");
+const path = require("path");
 const app = express();
 const PORT = 3000;
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.join(__dirname, "view")));
 
 const paramdb = {
     host: "localhost",
@@ -20,6 +22,7 @@ const router = express.Router();
 
 // Tambah rencana nonton (AddModel::insert)
 router.post("/api/add", async (req, res) => {
+    console.log(req.body);
     const { movie_title, place, watch_date, watch_with, price, note } = req.body;
     try {
         const db = await mysql.createConnection(paramdb);
@@ -34,6 +37,7 @@ router.post("/api/add", async (req, res) => {
 
 // Ambil rencana selesai (HistoryModel::getDonePlans)
 router.get("/api/history", async (req, res) => {
+    console.log(req.body);
     try {
         const db = await mysql.createConnection(paramdb);
         const sql = "SELECT * FROM plan WHERE status = 1";
@@ -47,6 +51,7 @@ router.get("/api/history", async (req, res) => {
 
 // Ambil rencana belum selesai (HomeModel::getPlans)
 router.get("/api/plans", async (req, res) => {
+    console.log("Menampilkan daftar rencana nonton");
     try {
         const db = await mysql.createConnection(paramdb);
         const sql = "SELECT * FROM plan WHERE status = 0";
@@ -60,6 +65,7 @@ router.get("/api/plans", async (req, res) => {
 
 // Hapus rencana (HomeModel::delete)
 router.delete("/api/plan/:id", async (req, res) => {
+    console.log("Menghapus rencana nonton dengan ID : ", req.params.id);
     const { id } = req.params;
     try {
         const db = await mysql.createConnection(paramdb);
@@ -74,6 +80,7 @@ router.delete("/api/plan/:id", async (req, res) => {
 
 // Tandai rencana sebagai selesai (HomeModel::markAsDone)
 router.put("/api/plan/:id/done", async (req, res) => {
+    console.log("Menandai sebagai selesai rencana nonton dengan ID : ", req.params.id);
     const { id } = req.params;
     try {
         const db = await mysql.createConnection(paramdb);

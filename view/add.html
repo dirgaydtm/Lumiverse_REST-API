@@ -1,171 +1,122 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tambah Rencana Nonton</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
 
-  <body
-    class="bg-gray-900 text-white h-screen flex item`s-center justify-center"
-  >
-    <section class="bg-gray-800 shadow-lg rounded-2xl p-8 w-full max-w-xl mx-5">
-      <h2 class="text-2xl font-bold mb-6 text-white text-center">
-        Mau Nonton Apa?
-      </h2>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tambah Rencana Nonton</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
 
-      <form id="addForm" class="space-y-4">
-        <div>
-          <label for="movie_title" class="text-md font-medium my-1"
-            >Nama Film</label
-          >
-          <input
-            type="text"
-            id="movie_title"
-            name="movie_title"
-            placeholder="Contoh: Interstellar"
-            class="py-3 px-2 w-full rounded-lg shadow bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-indigo-600 transition duration-200"
-            required
-          />
-        </div>
+<body class="bg-gray-900 text-white h-screen flex items-center justify-center">
+  <section class="bg-gray-800 shadow-lg rounded-2xl p-8 w-full max-w-xl mx-5">
+    <h2 class="text-2xl font-bold mb-6 text-white text-center">Mau Nonton Apa?</h2>
 
-        <div>
-          <label for="place" class="text font-medium my-1">Tempat</label>
-          <input
-            type="text"
-            id="place"
-            name="place"
-            placeholder="Contoh: XXI Malang Town Center"
-            class="py-3 px-2 w-full rounded-lg shadow bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-indigo-600 transition duration-200"
-            required
-          />
-        </div>
+    <form id="addForm" class="space-y-4">
+      <div>
+        <label for="movie_title" class="text-md font-medium my-1">Nama Film</label>
+        <input type="text" id="movie_title" name="movie_title" placeholder="Contoh: Interstellar"
+          class="py-3 px-2 w-full rounded-lg shadow bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-indigo-600 transition duration-200"
+          required />
+      </div>
 
-        <div class="flex flex-row gap-4">
-          <div class="flex flex-col flex-1">
-            <label for="watch_with" class="text font-medium my-1"
-              >Bersama</label
-            >
-            <select
-              id="watch_with"
-              name="watch_with"
-              class="py-3 px-2 w-full rounded-lg shadow bg-gray-700 text-white focus:outline-none focus:ring-1 focus:ring-indigo-600 transition duration-200"
-              required
-            >
-              <option value="Sendiri">Sendiri</option>
-              <option value="Teman">Teman</option>
-              <option value="Keluarga">Keluarga</option>
-              <option value="Pasangan">Pasangan</option>
-              <option value="Lainnya">Lainnya</option>
-            </select>
-          </div>
-          <div class="flex flex-col flex-1">
-            <label for="price" class="text font-medium my-1">Harga Tiket</label>
-            <input
-              type="number"
-              id="price"
-              name="price"
-              min="1"
-              placeholder="Contoh: 45000"
-              class="py-3 px-2 w-full rounded-lg shadow bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-indigo-600 transition duration-200"
-            />
-          </div>
-        </div>
+      <div>
+        <label for="place" class="text font-medium my-1">Tempat</label>
+        <input type="text" id="place" name="place" placeholder="Contoh: XXI Malang Town Center"
+          class="py-3 px-2 w-full rounded-lg shadow bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-indigo-600 transition duration-200"
+          required />
+      </div>
 
-        <div>
-          <label for="watch_date" class="text font-medium my-1">Tanggal</label>
-          <input
-            type="date"
-            id="watch_date"
-            name="watch_date"
+      <div class="flex flex-row gap-4">
+        <div class="flex flex-col flex-1">
+          <label for="watch_with" class="text font-medium my-1">Bersama</label>
+          <select id="watch_with" name="watch_with"
             class="py-3 px-2 w-full rounded-lg shadow bg-gray-700 text-white focus:outline-none focus:ring-1 focus:ring-indigo-600 transition duration-200"
-            required
-          />
+            required>
+            <option value="Sendiri">Sendiri</option>
+            <option value="Teman">Teman</option>
+            <option value="Keluarga">Keluarga</option>
+            <option value="Pasangan">Pasangan</option>
+            <option value="Lainnya">Lainnya</option>
+          </select>
         </div>
-
-        <div>
-          <label for="note" class="text font-medium my-1">Catatan</label>
-          <textarea
-            id="note"
-            maxlength="150"
-            name="note"
-            rows="3"
-            class="py-3 px-2 w-full rounded-lg shadow bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-indigo-600 transition duration-200 resize-none"
-            placeholder="Catatan tambahan..."
-          ></textarea>
+        <div class="flex flex-col flex-1">
+          <label for="price" class="text font-medium my-1">Harga Tiket</label>
+          <input type="number" id="price" name="price" min="1" placeholder="Contoh: 45000"
+            class="py-3 px-2 w-full rounded-lg shadow bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-indigo-600 transition duration-200" />
         </div>
+      </div>
 
-        <div class="flex justify-between items-center mt-6">
-          <a
-            href="home.html"
-            class="text-indigo-400 hover:text-white hover:bg-indigo-500 rounded-full p-2 transition duration-300"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-              class="w-6 h-6"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M11.03 3.97a.75.75 0 0 1 0 1.06l-6.22 6.22H21a.75.75 0 0 1 0 1.5H4.81l6.22 6.22a.75.75 0 1 1-1.06 1.06l-7.5-7.5a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 0 1 1.06 0Z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </a>
+      <div>
+        <label for="watch_date" class="text font-medium my-1">Tanggal</label>
+        <input type="date" id="watch_date" name="watch_date"
+          class="py-3 px-2 w-full rounded-lg shadow bg-gray-700 text-white focus:outline-none focus:ring-1 focus:ring-indigo-600 transition duration-200"
+          required />
+      </div>
 
-          <button
-            type="submit"
-            class="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-2 rounded-full transition duration-300"
-          >
-            Tambah Rencana
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-              class="w-6 h-6"
-            >
-              <path
-                d="M4 12H20M12 4V20"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </button>
-        </div>
-      </form>
-      <div id="result" class="mt-4 text-center"></div>
-    </section>
-    <script>
-      document
-        .getElementById("addForm")
-        .addEventListener("submit", async function (e) {
-          e.preventDefault();
-          const form = e.target;
-          const data = {
-            movie_title: form.movie_title.value,
-            place: form.place.value,
-            watch_date: form.watch_date.value,
-            watch_with: form.watch_with.value,
-            price: form.price.value,
-            note: form.note.value,
-          };
-          const res = await fetch("http://localhost:3000/api/add", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(data),
-          });
-          const result = await res.json();
-          if (result.success) {
-            window.location.href = "home.html";
-          } else {
-            document.getElementById("result").textContent =
-              "Error: " + (result.error || "Unknown error");
-          }
+      <div>
+        <label for="note" class="text font-medium my-1">Catatan</label>
+        <textarea id="note" maxlength="150" name="note" rows="3"
+          class="py-3 px-2 w-full rounded-lg shadow bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-indigo-600 transition duration-200 resize-none"
+          placeholder="Catatan tambahan..."></textarea>
+      </div>
+
+      <div class="flex justify-between items-center mt-6">
+        <a href="home.html"
+          class="text-indigo-400 hover:text-white hover:bg-indigo-500 rounded-full p-2 transition duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+            <path fill-rule="evenodd"
+              d="M11.03 3.97a.75.75 0 0 1 0 1.06l-6.22 6.22H21a.75.75 0 0 1 0 1.5H4.81l6.22 6.22a.75.75 0 1 1-1.06 1.06l-7.5-7.5a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 0 1 1.06 0Z"
+              clip-rule="evenodd" />
+          </svg>
+        </a>
+
+        <button type="submit"
+          class="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-2 rounded-full transition duration-300">
+          Tambah Rencana
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+            <path d="M4 12H20M12 4V20" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+    </form>
+
+    <div id="result" class="mt-4 text-center text-red-400"></div>
+  </section>
+
+  <script>
+    document.getElementById("addForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+      const form = e.target;
+      const data = {
+        movie_title: form.movie_title.value,
+        place: form.place.value,
+        watch_date: form.watch_date.value,
+        watch_with: form.watch_with.value,
+        price: parseInt(form.price.value) || 0,
+        note: form.note.value,
+      };
+
+      try {
+        const res = await fetch("http://localhost:3000/api/add", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
         });
-    </script>
-  </body>
+
+        const result = await res.json();
+
+        if (result.success) {
+          window.location.href = "home.html";
+        } else {
+          document.getElementById("result").textContent = "Error: " + (result.error || "Unknown error");
+        }
+      } catch (err) {
+        document.getElementById("result").textContent = "Gagal terhubung ke server.";
+      }
+    });
+  </script>
+</body>
+
 </html>
